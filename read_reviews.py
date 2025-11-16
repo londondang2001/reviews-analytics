@@ -14,9 +14,11 @@ with open('reviews.txt', 'r') as f:
 			print(len(data)) 
                          # 每读1000行, 印一次data清单长度
                          # 通过计数, 记录循环次数, 知道读取进程状态
-print(len(data))
-print(data[0])
-print('---------------')
-print(data[1])
+print('档案读取完了, 总共有', len(data), '笔资料')
+
+sum_len = 0
+	for d in data:
+		sum_len += len(d)
+print('留言的平均长度为', sum_len / len(data))
 
 
